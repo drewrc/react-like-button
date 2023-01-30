@@ -9,11 +9,19 @@ function App() {
 
   const addLike = () => {
     const like = 1;
+    setLikes (like + likes);
+  }
+   
+  
 
-    setLikes(like + likes);
-  };
-
-  return <button onClick={addLike}>likes {likes}</button>;
+  const changeLike = () => {
+    if (likes === 1) {
+      return `${likes} like`
+    } else {
+      return `${likes} likes`
+   };
+  }
+  return <button onClick={addLike}> {changeLike()}</button>;
 }
 
 export default App;
