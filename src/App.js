@@ -1,31 +1,19 @@
-import './App.css';
+import "./App.css";
 
+import { useState } from "react";
 
+function App() {
+  const [likes, setLikes] = useState(0);
 
+  // const likeHTML = <button onClick={addLike}></button>;
 
+  const addLike = () => {
+    const like = 1;
 
+    setLikes(like + likes);
+  };
 
-  
-  function App() {
-
-    const INITIAL_VALUE = 0;
-    const [likes, setLikes] = useState(INITIAL_VALUE);
-    
-    
-    return(
-
-  <button id="like-btn">like 👍 0</button>
-       
-      
-    );
-  }
-    
-
-    
-  
- 
-
-
-
+  return <button onClick={addLike}>likes {likes}</button>;
+}
 
 export default App;
